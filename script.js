@@ -1,26 +1,26 @@
-let screen = document.querySelector('.screen');
+let mycalculator = document.querySelector('.select');
 
     function appendValue(value) {
-        screen.value += value; 
+        mycalculator.value += value; 
     }
 
     function performOperation(operation) {
-        if (screen.value !== '') {
-            screen.value+=operation; 
+        if (mycalculator.value !== '') {
+            mycalculator.value+=operation; 
         }
     }
 
     function calculate() {
-        if (screen.value !== '') {
-            let result = eval(`${screen.value}`);
-            screen.value = result; 
+        if (mycalculator.value !== '') {
+            let result = eval(`${mycalculator.value}`);
+            mycalculator.value = result; 
         }
     }
 
     function clearScreen() {
-        screen.value = ''; 
+        mycalculator.value = ''; 
     }
 
     function deleteLast() {
-        screen.value = screen.value.slice(0, -1); 
+        mycalculator.value = mycalculator.value.slice(0, -1); 
     }
